@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.arun.com/cdm" version="6.0" xmlns="http://www.arun.com/cdm">
+<xs:include schemaLocation="CDM.xsd"/>
+<xs:element name="SingleFamilyLoanContainers" type="SingleFamilyLoanContainers" />
+$MERGED
+</xs:schema>

@@ -1,0 +1,11 @@
+
+sample1.xsd	sample2.xsd
+	ADD	COMPLEX_TYPE			SCHEMA1	EscrowItemExtn
+	ADD	COMPLEX_TYPE			SCHEMA2	Programs
+	ADD	COMPLEX_TYPE	ALL_SEQUENCE	SCHEMA1	SingleFamilyEscrowItemContainer/Added-0
+
+	ADD	COMPLEX_TYPE	ALL_SEQUENCE	SCHEMA2	SingleFamilyLoanContainer/Added-0
+
+
+=============================================================
+

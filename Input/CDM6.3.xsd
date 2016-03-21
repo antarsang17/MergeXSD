@@ -1,0 +1,49 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.arun.com/cdm" version="6.2" xmlns="http://www.arun.com/cdm">
+
+   <xs:simpleType name="FMCount">
+    <xs:restriction base="xs:short">
+    </xs:restriction>
+  </xs:simpleType>
+  
+ <xs:simpleType name="FMValue">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="FMXMLDocument">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+ <xs:simpleType name="FMXMLSchema">
+    <xs:restriction base="xs:string">
+      <xs:length value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="WorkoutWaterfallModelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FederalStandard"/>
+      <xs:enumeration value="LegacyStandard"/>
+      <xs:enumeration value="PrincipalForgivenessModel"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+    <xs:complexType name="Account">
+    <xs:all>
+      <xs:element maxOccurs="1" minOccurs="0" name="AccountBillableIndicator" type="FMXMLSchema"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AccountDescription" type="FMXMLDocument"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AccountIdentifier" type="FMXMLDocument"/>
+    </xs:all>
+  </xs:complexType>
+  
+   <xs:complexType name="AccountingPeriod">
+    <xs:all>
+      <xs:element maxOccurs="1" minOccurs="0" name="AccountingPeriodIdentifier" type="FMXMLSchema"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AccountingPeriodReportingLagDayCount" type="FMCount"/>      
+    </xs:all>
+  </xs:complexType>
+  
+</xs:schema>
